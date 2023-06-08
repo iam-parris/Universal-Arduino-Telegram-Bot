@@ -726,6 +726,11 @@ String UniversalTelegramBot::sendPhoto(const String& chat_id, const String& phot
   return sendPostPhoto(payload.as<JsonObject>());
 }
 
+bool UniversalTelegramBot::deleteMessages(const String& chat_id, int message_id, bool revoke){
+
+  Serial.println(F("Delete Message Id'"));
+}
+
 bool UniversalTelegramBot::checkForOkResponse(const String& response) {
   int last_id;
   DynamicJsonDocument doc(response.length());

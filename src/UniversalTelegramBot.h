@@ -106,6 +106,8 @@ public:
                    bool disable_notification = false,
                    int reply_to_message_id = 0, const String& keyboard = "");
 
+  bool deleteMessages(const String& chat_id, int message_id, bool revoke = true);
+
   bool answerCallbackQuery(const String &query_id,
                            const String &text = "",
                            bool show_alert = false,
